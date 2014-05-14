@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProtocoloWebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ProtocoloWebModelStoreContainer">
+    <EntitySet Name="Usuarios" EntityType="ProtocoloWebModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Formulario" EntityType="ProtocoloWebModel.Store.Formulario" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Formulario" Type="bit" Nullable="true" />
+    <Property Name="Pesquisar" Type="bit" Nullable="true" />
+    <Property Name="Controladoria" Type="bit" Nullable="true" />
+    <Property Name="Financeira" Type="bit" Nullable="true" />
+    <Property Name="Comex" Type="bit" Nullable="true" />
+    <Property Name="PCeAdiantamentos" Type="bit" Nullable="true" />
+    <Property Name="Fiscal" Type="bit" Nullable="true" />
+    <Property Name="Fornecedor" Type="bit" Nullable="true" />
+    <Property Name="Input" Type="bit" Nullable="true" />
+    <Property Name="Administrador" Type="bit" Nullable="true" />
+    <Property Name="Exclusao" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Formulario">
+    <Key>
+      <PropertyRef Name="idFormulario" />
+    </Key>
+    <Property Name="idFormulario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CNPJ" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="Matriz" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="NumNF" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="NumPedido" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="NumAP" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="dtVencimento" Type="datetime" Nullable="true" />
+    <Property Name="valorNF" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="dtEmissaoDOC" Type="datetime" Nullable="true" />
+    <Property Name="codJustificativa" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="Departamento" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="tipoDocumento" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="documento" Type="varchar" Nullable="true" MaxLength="200" />
+    <Property Name="statusControladoria" Type="bit" Nullable="true" />
+    <Property Name="statusFinanceira" Type="bit" Nullable="true" />
+    <Property Name="statusComex" Type="bit" Nullable="true" />
+    <Property Name="statusPCeAdiantamentos" Type="bit" Nullable="true" />
+    <Property Name="statusFiscal" Type="bit" Nullable="true" />
+    <Property Name="statusFornecedor" Type="bit" Nullable="true" />
+    <Property Name="statusInput" Type="bit" Nullable="true" />
+    <Property Name="dataCadastro" Type="datetime" Nullable="true" />
+    <Property Name="Justificativa" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="concluido" Type="bit" Nullable="true" />
+    <Property Name="loginSolicitante" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="emailSolicitante" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="vinculo" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="tipoContrato" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="contratoInicio" Type="datetime" Nullable="true" />
+    <Property Name="contratoFim" Type="datetime" Nullable="true" />
+    <Property Name="receitaFederal" Type="datetime" Nullable="true" />
+    <Property Name="prefeitura" Type="datetime" Nullable="true" />
+    <Property Name="cnae" Type="datetime" Nullable="true" />
+    <Property Name="optanteSimples" Type="bit" Nullable="true" />
+    <Property Name="optanteSimplesData" Type="datetime" Nullable="true" />
+    <Property Name="sintegra" Type="datetime" Nullable="true" />
+    <Property Name="juntaComercial" Type="datetime" Nullable="true" />
+    <Property Name="IRpct" Type="decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="IRvalor" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="PCCpct" Type="decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="PCCvalor" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="ISSpct" Type="decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="ISSvalor" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="INSSpct" Type="decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="INSSvalor" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="liquido" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="cadastroMunicipal" Type="datetime" Nullable="true" />
+    <Property Name="CodRetencaoISS" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="PCCnfs" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CFOP" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ZA" Type="bit" Nullable="true" />
+    <Property Name="ZS" Type="bit" Nullable="true" />
+    <Property Name="NT" Type="bit" Nullable="true" />
+    <Property Name="codServico" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="valorDeducao" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="aliquota" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="tipoDeDocumento" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="tributacaoServico" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="codigoPrestador" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="atribuicaoISS" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="situacaoNTFS" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ISSretido" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="registroTributacao" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="optSimples" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="tipoNFConv" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="codServicoMun" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="tpTribServico" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="lote" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Reprovado" Type="bit" Nullable="true" />
+    <Property Name="Excluido" Type="bit" Nullable="true" />
+    <Property Name="IRbase" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="PCCbase" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="ISSbase" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="INSSbase" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="emailResponsavel" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProtocoloWebModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ProtocoloWebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuarios" EntityType="ProtocoloWebModel.Usuarios" />
+          <EntitySet Name="Formulario" EntityType="ProtocoloWebModel.Formulario" />
+        </EntityContainer>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Formulario" Type="Boolean" />
+          <Property Name="Pesquisar" Type="Boolean" />
+          <Property Name="Controladoria" Type="Boolean" />
+          <Property Name="Financeira" Type="Boolean" />
+          <Property Name="Comex" Type="Boolean" />
+          <Property Name="PCeAdiantamentos" Type="Boolean" />
+          <Property Name="Fiscal" Type="Boolean" />
+          <Property Name="Fornecedor" Type="Boolean" />
+          <Property Name="Input" Type="Boolean" />
+          <Property Name="Administrador" Type="Boolean" />
+          <Property Type="Boolean" Name="Exclusao" />
+        </EntityType>
+        <EntityType Name="Formulario">
+          <Key>
+            <PropertyRef Name="idFormulario" />
+          </Key>
+          <Property Type="Int32" Name="idFormulario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Empresa" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CNPJ" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Matriz" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NumNF" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NumPedido" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NumAP" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="dtVencimento" Precision="3" />
+          <Property Type="String" Name="valorNF" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="dtEmissaoDOC" Precision="3" />
+          <Property Type="String" Name="codJustificativa" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Departamento" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoDocumento" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="documento" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="statusControladoria" />
+          <Property Type="Boolean" Name="statusFinanceira" />
+          <Property Type="Boolean" Name="statusComex" />
+          <Property Type="Boolean" Name="statusPCeAdiantamentos" />
+          <Property Type="Boolean" Name="statusFiscal" />
+          <Property Type="Boolean" Name="statusFornecedor" />
+          <Property Type="Boolean" Name="statusInput" />
+          <Property Type="DateTime" Name="dataCadastro" Precision="3" />
+          <Property Type="String" Name="Justificativa" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="concluido" />
+          <Property Type="String" Name="loginSolicitante" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="emailSolicitante" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="vinculo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoContrato" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="contratoInicio" Precision="3" />
+          <Property Type="DateTime" Name="contratoFim" Precision="3" />
+          <Property Type="DateTime" Name="receitaFederal" Precision="3" />
+          <Property Type="DateTime" Name="prefeitura" Precision="3" />
+          <Property Type="DateTime" Name="cnae" Precision="3" />
+          <Property Type="Boolean" Name="optanteSimples" />
+          <Property Type="DateTime" Name="optanteSimplesData" Precision="3" />
+          <Property Type="DateTime" Name="sintegra" Precision="3" />
+          <Property Type="DateTime" Name="juntaComercial" Precision="3" />
+          <Property Type="Decimal" Name="IRpct" Precision="18" Scale="2" />
+          <Property Type="String" Name="IRvalor" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="PCCpct" Precision="18" Scale="2" />
+          <Property Type="String" Name="PCCvalor" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="ISSpct" Precision="18" Scale="2" />
+          <Property Type="String" Name="ISSvalor" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="INSSpct" Precision="18" Scale="2" />
+          <Property Type="String" Name="INSSvalor" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="liquido" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="cadastroMunicipal" Precision="3" />
+          <Property Type="String" Name="CodRetencaoISS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PCCnfs" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CFOP" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ZA" />
+          <Property Type="Boolean" Name="ZS" />
+          <Property Type="Boolean" Name="NT" />
+          <Property Type="String" Name="codServico" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="valorDeducao" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="aliquota" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoDeDocumento" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tributacaoServico" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="codigoPrestador" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="atribuicaoISS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="situacaoNTFS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ISSretido" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="registroTributacao" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="optSimples" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoNFConv" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="codServicoMun" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tpTribServico" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="lote" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Reprovado" />
+          <Property Type="Boolean" Name="Excluido" />
+          <Property Type="String" Name="IRbase" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PCCbase" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ISSbase" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INSSbase" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="emailResponsavel" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProtocoloWebModelStoreContainer" CdmEntityContainer="ProtocoloWebEntities">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(ProtocoloWebModel.Usuarios)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Formulario" ColumnName="Formulario" />
+          <ScalarProperty Name="Pesquisar" ColumnName="Pesquisar" />
+          <ScalarProperty Name="Controladoria" ColumnName="Controladoria" />
+          <ScalarProperty Name="Financeira" ColumnName="Financeira" />
+          <ScalarProperty Name="Comex" ColumnName="Comex" />
+          <ScalarProperty Name="PCeAdiantamentos" ColumnName="PCeAdiantamentos" />
+          <ScalarProperty Name="Fiscal" ColumnName="Fiscal" />
+          <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
+          <ScalarProperty Name="Input" ColumnName="Input" />
+          <ScalarProperty Name="Administrador" ColumnName="Administrador" />
+          <ScalarProperty Name="Exclusao" ColumnName="Exclusao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formulario">
+      <EntityTypeMapping TypeName="IsTypeOf(ProtocoloWebModel.Formulario)">
+        <MappingFragment StoreEntitySet="Formulario">
+          <ScalarProperty Name="idFormulario" ColumnName="idFormulario" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+          <ScalarProperty Name="Matriz" ColumnName="Matriz" />
+          <ScalarProperty Name="NumNF" ColumnName="NumNF" />
+          <ScalarProperty Name="NumPedido" ColumnName="NumPedido" />
+          <ScalarProperty Name="NumAP" ColumnName="NumAP" />
+          <ScalarProperty Name="dtVencimento" ColumnName="dtVencimento" />
+          <ScalarProperty Name="valorNF" ColumnName="valorNF" />
+          <ScalarProperty Name="dtEmissaoDOC" ColumnName="dtEmissaoDOC" />
+          <ScalarProperty Name="codJustificativa" ColumnName="codJustificativa" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="statusControladoria" ColumnName="statusControladoria" />
+          <ScalarProperty Name="statusFinanceira" ColumnName="statusFinanceira" />
+          <ScalarProperty Name="statusComex" ColumnName="statusComex" />
+          <ScalarProperty Name="statusPCeAdiantamentos" ColumnName="statusPCeAdiantamentos" />
+          <ScalarProperty Name="statusFiscal" ColumnName="statusFiscal" />
+          <ScalarProperty Name="statusFornecedor" ColumnName="statusFornecedor" />
+          <ScalarProperty Name="statusInput" ColumnName="statusInput" />
+          <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
+          <ScalarProperty Name="Justificativa" ColumnName="Justificativa" />
+          <ScalarProperty Name="concluido" ColumnName="concluido" />
+          <ScalarProperty Name="loginSolicitante" ColumnName="loginSolicitante" />
+          <ScalarProperty Name="emailSolicitante" ColumnName="emailSolicitante" />
+          <ScalarProperty Name="vinculo" ColumnName="vinculo" />
+          <ScalarProperty Name="tipoContrato" ColumnName="tipoContrato" />
+          <ScalarProperty Name="contratoInicio" ColumnName="contratoInicio" />
+          <ScalarProperty Name="contratoFim" ColumnName="contratoFim" />
+          <ScalarProperty Name="receitaFederal" ColumnName="receitaFederal" />
+          <ScalarProperty Name="prefeitura" ColumnName="prefeitura" />
+          <ScalarProperty Name="cnae" ColumnName="cnae" />
+          <ScalarProperty Name="optanteSimples" ColumnName="optanteSimples" />
+          <ScalarProperty Name="optanteSimplesData" ColumnName="optanteSimplesData" />
+          <ScalarProperty Name="sintegra" ColumnName="sintegra" />
+          <ScalarProperty Name="juntaComercial" ColumnName="juntaComercial" />
+          <ScalarProperty Name="IRpct" ColumnName="IRpct" />
+          <ScalarProperty Name="IRvalor" ColumnName="IRvalor" />
+          <ScalarProperty Name="PCCpct" ColumnName="PCCpct" />
+          <ScalarProperty Name="PCCvalor" ColumnName="PCCvalor" />
+          <ScalarProperty Name="ISSpct" ColumnName="ISSpct" />
+          <ScalarProperty Name="ISSvalor" ColumnName="ISSvalor" />
+          <ScalarProperty Name="INSSpct" ColumnName="INSSpct" />
+          <ScalarProperty Name="INSSvalor" ColumnName="INSSvalor" />
+          <ScalarProperty Name="liquido" ColumnName="liquido" />
+          <ScalarProperty Name="cadastroMunicipal" ColumnName="cadastroMunicipal" />
+          <ScalarProperty Name="CodRetencaoISS" ColumnName="CodRetencaoISS" />
+          <ScalarProperty Name="PCCnfs" ColumnName="PCCnfs" />
+          <ScalarProperty Name="CFOP" ColumnName="CFOP" />
+          <ScalarProperty Name="ZA" ColumnName="ZA" />
+          <ScalarProperty Name="ZS" ColumnName="ZS" />
+          <ScalarProperty Name="NT" ColumnName="NT" />
+          <ScalarProperty Name="codServico" ColumnName="codServico" />
+          <ScalarProperty Name="valorDeducao" ColumnName="valorDeducao" />
+          <ScalarProperty Name="aliquota" ColumnName="aliquota" />
+          <ScalarProperty Name="tipoDeDocumento" ColumnName="tipoDeDocumento" />
+          <ScalarProperty Name="tributacaoServico" ColumnName="tributacaoServico" />
+          <ScalarProperty Name="codigoPrestador" ColumnName="codigoPrestador" />
+          <ScalarProperty Name="atribuicaoISS" ColumnName="atribuicaoISS" />
+          <ScalarProperty Name="situacaoNTFS" ColumnName="situacaoNTFS" />
+          <ScalarProperty Name="ISSretido" ColumnName="ISSretido" />
+          <ScalarProperty Name="registroTributacao" ColumnName="registroTributacao" />
+          <ScalarProperty Name="optSimples" ColumnName="optSimples" />
+          <ScalarProperty Name="tipoNFConv" ColumnName="tipoNFConv" />
+          <ScalarProperty Name="codServicoMun" ColumnName="codServicoMun" />
+          <ScalarProperty Name="tpTribServico" ColumnName="tpTribServico" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="Reprovado" ColumnName="Reprovado" />
+          <ScalarProperty Name="Excluido" ColumnName="Excluido" />
+          <ScalarProperty Name="IRbase" ColumnName="IRbase" />
+          <ScalarProperty Name="PCCbase" ColumnName="PCCbase" />
+          <ScalarProperty Name="ISSbase" ColumnName="ISSbase" />
+          <ScalarProperty Name="INSSbase" ColumnName="INSSbase" />
+          <ScalarProperty Name="emailResponsavel" ColumnName="emailResponsavel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

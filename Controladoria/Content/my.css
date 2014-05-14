@@ -1,0 +1,339 @@
+﻿* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*#divJustificativa{
+    position:absolute;
+    
+    border-radius: 7px;
+    margin:30px auto 0;
+    padding:6px;  
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -200px; 
+}*/
+
+.imgBtn {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#certoIco {
+    display: inline-table;
+    position: absolute;
+    margin-top: -3px;   
+}
+
+#erradoIco {
+    display: inline-table;
+    position: absolute;
+    margin-top: -3px;   
+}
+.ui-checkbox input, .ui-radio input {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    width: 19px;
+    height: 25px;
+    margin: -10px 0 0 0;
+    padding: 0 5px 0 0;
+    display: block;
+    clear: left;
+    float: left;
+    outline: 0!important;
+    z-index: 1;
+}
+
+.checkbox, .radio {
+  width: 19px;
+  height: 25px;
+  padding: 0 5px 0 0;
+  background: url(~/Images/checkbox.png) no-repeat;
+  display: block;
+  clear: left;
+  float: left;
+}
+
+.mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:black;
+    width: 100%;
+    height: 100%;
+    opacity:0.85;
+	-moz-opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+body {
+  padding: 20px 15%;
+}
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  /*margin: 0 0 10px 0;*/
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+
+form > div > label,
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+	font-size: 90%;
+}
+fieldset {
+	border: 0;
+  padding: 0;
+}
+
+.ui-btn-inner {
+padding: .3em 10px;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=data] {
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+.ui-select .ui-btn{
+    width: 70%;
+}
+
+input.ui-input-text, textarea.ui-input-text {
+        width: 70%;
+}
+
+ #txtAP {
+        float:left;
+        display: inherit;
+    } 
+
+ checkbox {
+     width: 50px;
+ }
+
+ .tamanhoCB {
+     width: 70%;
+ }
+
+ .txtHeader {
+     font-size: 14px;
+     color: red;
+ }
+
+@media only screen and (min-width: 769px) {
+    #divPeriodo {
+    display: inline-table;
+    width: 35%;
+    }
+
+    #divCNPJ {
+    display: inline-table;
+    width: 35%;
+    }
+
+    #divNFAP {
+        display: inline-table;
+        vertical-align: top;
+        width: 25%;
+    }
+
+    #divDPTP {
+        display: inline-table;
+        vertical-align: top;
+        width: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+  form > div > label,
+	legend {
+  	text-align: right;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+	  form > div > label,
+	  legend {
+		  width: 100%;
+		float: none;
+		margin: 0 0 5px 0;
+	  }
+	  form > div > div,
+	  form > div > fieldset > div {
+		width: 100%;
+		float: none;
+	  }
+	  input[type=text],
+	  input[type=email],
+	  input[type=url],
+	  input[type=password],
+	  textarea,
+	  select {
+		width: 100%; 
+	  }
+  
+    label.ui-input-text {
+    font-size: 16px;
+    display: block;
+    font-weight: normal;
+    margin: 0 0 .3em;
+    }
+
+    input.ui-input-text, textarea.ui-input-text {
+        width: 100%;
+    }
+
+   .ui-select .ui-btn{
+    width: 100%;
+    }
+
+   #linkSelecionar {
+    width: 95%;   
+   }
+
+   #linkPesquisaAP {
+    width: 95%;   
+   }
+
+   #txtDocumento {
+        float:left;
+        display: inherit;
+    } 
+   
+   #txtAP {
+        float:left;
+        display: inherit;
+    } 
+      
+   #divPeriodo {
+       display: inherit;
+       width: 100%;
+   }
+
+   #divCNPJ {
+       display: inherit;
+       width: 100%;
+   }
+
+   #divNFAP {
+        width: 100%;
+    }
+
+   #divDPTP {
+    width: 100%;
+    }
+
+   #txtNF {
+        width: 100%;
+    }
+
+   #txtAP {
+        width: 100%;
+    }
+
+    #txtDataInicial {
+        width: 100%;
+    }
+
+    #txtDataFinal {
+        width: 100%;
+    }
+
+     .tamanhoCB {
+         width: 100%;
+    }
+}
+
+/* CSS MEDIA FOR IPAD*/
+@media (min-device-width: 481px) and (max-device-width: 1024px) {
+    #divPeriodo {
+        display: inline-table;
+        width: 70%;
+    }
+
+    #divCNPJ {
+        display: inline-table;
+        width: 70%;
+    }
+
+    #divNFAP {
+        width: 70%;
+    }
+
+   #divDPTP {
+    width: 70%;
+    }
+
+   #txtNF {
+        width: 70%;
+    }
+
+   #txtAP {
+        width: 70%;
+    }
+
+    #txtDataInicial {
+        width: 70%;
+    }
+
+    #txtDataFinal {
+        width: 70%;
+    }
+
+    .tamanhoCB {
+         width: 70%;
+    }
+}
+
+
