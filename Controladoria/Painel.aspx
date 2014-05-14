@@ -12,7 +12,7 @@
 
     <script src="Scripts/jquery.maskedinput.js"></script>
     <script src="Scripts/maskMoney.js"></script>
-    <script>
+    <script> 
 
         jQuery(function ($) {
             $("#txtContratoInicio_edit").mask("99/99/9999");
